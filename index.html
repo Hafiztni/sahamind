@@ -130,7 +130,32 @@
             display: none;
             font-size: 24px;
             cursor: pointer;
-            color: #4a5568;
+            color: #cbd5e0;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        .menu-toggle:hover {
+            color: #4a6cf7;
+            background: rgba(74, 108, 247, 0.1);
+        }
+
+        .nav-links.active {
+            display: flex !important;
+            left: 0;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
         
         /* Main Container - LEBIH BESAR */
@@ -1209,12 +1234,22 @@
                 flex-direction: column;
                 padding: 20px;
                 background-color: rgba(29, 32, 40, 0.95);
+                display: none;
+                left: 0;
+                max-height: calc(100vh - 65px);
+                overflow-y: auto;
             }
             
             .nav-link {
                 color: #cbd5e0;
                 font-size: 14px;
                 padding: 10px 15px;
+            }
+
+            .login-btn {
+                width: 100%;
+                justify-content: flex-start;
+                margin-top: 10px;
             }
             
             .menu-toggle {
@@ -1359,12 +1394,22 @@
                 flex-direction: column;
                 padding: 15px;
                 background-color: rgba(29, 32, 40, 0.95);
+                display: none;
+                left: 0;
+                max-height: calc(100vh - 60px);
+                overflow-y: auto;
             }
             
             .nav-link {
                 color: #cbd5e0;
                 font-size: 13px;
                 padding: 8px 12px;
+            }
+
+            .login-btn {
+                width: 100%;
+                justify-content: flex-start;
+                margin-top: 8px;
             }
             
             .menu-toggle {
@@ -1618,6 +1663,10 @@
                 flex-direction: column;
                 padding: 12px;
                 background-color: rgba(29, 32, 40, 0.95);
+                display: none;
+                left: 0;
+                max-height: calc(100vh - 55px);
+                overflow-y: auto;
             }
             
             .nav-link {
@@ -1625,6 +1674,14 @@
                 font-size: 12px;
                 padding: 6px 10px;
                 gap: 6px;
+            }
+
+            .login-btn {
+                width: 100%;
+                justify-content: flex-start;
+                margin-top: 6px;
+                padding: 8px 10px;
+                font-size: 12px;
             }
             
             .menu-toggle {
